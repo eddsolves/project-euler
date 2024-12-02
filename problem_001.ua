@@ -1,8 +1,7 @@
 # https://projecteuler.net/problem=1
 
-⇡1000                   # Range from 0 to 999
-[⊃(=0◿3|=0◿5)].         # Mask for modulo 5
-(=0◿3)                  # Mask for modulo 3
-¬ /×                    # NAND
-▽                       # Keep values
-/+                      # Sum array
+⇡1000       # Range 1..1000
+=0⊞◿3_5.    # Run `mod` [3 5] on Range
+/↥          # Logical AND both results
+▽           # Filter original Range
+/+          # Reduce with `sum`
